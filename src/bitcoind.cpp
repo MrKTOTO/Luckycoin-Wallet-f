@@ -123,11 +123,11 @@ bool AppInit(int argc, char* argv[])
             if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "luckycoin:"))
                 fCommandLine = true;
 
-        if (fCommandLine)
+        /*if (fCommandLine)
         {
             fprintf(stderr, "Error: There is no RPC client functionality in luckycoind anymore. Use the luckycoin-cli utility instead.\n");
             exit(EXIT_FAILURE);
-        }
+        }*/
 
         // -server defaults to true for bitcoind but not for the GUI so do this here
         SoftSetBoolArg("-server", true);
